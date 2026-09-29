@@ -1,0 +1,71 @@
+{
+  "testedWith": "Microsoft Edge / Playwright",
+  "viewports": [
+    {
+      "width": 375,
+      "horizontalOverflow": false,
+      "javaScriptErrors": 0,
+      "serviceCount": 21,
+      "keyboardTabs": "passed",
+      "dialogFocus": "passed"
+    },
+    {
+      "width": 390,
+      "horizontalOverflow": false,
+      "javaScriptErrors": 0,
+      "serviceCount": 21,
+      "keyboardTabs": "passed",
+      "dialogFocus": "passed"
+    },
+    {
+      "width": 430,
+      "horizontalOverflow": false,
+      "javaScriptErrors": 0,
+      "serviceCount": 21,
+      "keyboardTabs": "passed",
+      "dialogFocus": "passed"
+    },
+    {
+      "width": 768,
+      "horizontalOverflow": false,
+      "javaScriptErrors": 0,
+      "serviceCount": 21,
+      "keyboardTabs": "passed",
+      "dialogFocus": "passed"
+    },
+    {
+      "width": 1024,
+      "horizontalOverflow": false,
+      "javaScriptErrors": 0,
+      "serviceCount": 21,
+      "keyboardTabs": "passed",
+      "dialogFocus": "passed"
+    },
+    {
+      "width": 1440,
+      "horizontalOverflow": false,
+      "javaScriptErrors": 0,
+      "serviceCount": 21,
+      "keyboardTabs": "passed",
+      "dialogFocus": "passed"
+    },
+    {
+      "width": 1920,
+      "horizontalOverflow": false,
+      "javaScriptErrors": 0,
+      "serviceCount": 21,
+      "keyboardTabs": "passed",
+      "dialogFocus": "passed"
+    }
+  ],
+  "priorInteractionChecks": [
+    "Mobile menu open, navigation and close",
+    "All service categories",
+    "Complete price list",
+    "Lightbox arrow navigation and Escape",
+    "All visible images load",
+    "Local fonts load",
+    "One H1",
+    "All five price groups available with JavaScript disabled"
+  ]
+}
