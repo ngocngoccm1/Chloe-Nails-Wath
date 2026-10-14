@@ -1,61 +1,61 @@
 {
-  "testedWith": "Microsoft Edge / Playwright",
+  "testedWith": "Microsoft Edge / Playwright, 2026-10-14",
   "viewports": [
     {
       "width": 375,
       "horizontalOverflow": false,
       "javaScriptErrors": 0,
       "serviceCount": 21,
-      "keyboardTabs": "passed",
-      "dialogFocus": "passed"
+      "bookingLinksToSetmore": "passed",
+      "serviceMenu": "passed"
     },
     {
       "width": 390,
       "horizontalOverflow": false,
       "javaScriptErrors": 0,
       "serviceCount": 21,
-      "keyboardTabs": "passed",
-      "dialogFocus": "passed"
+      "bookingLinksToSetmore": "passed",
+      "serviceMenu": "passed"
     },
     {
       "width": 430,
       "horizontalOverflow": false,
       "javaScriptErrors": 0,
       "serviceCount": 21,
-      "keyboardTabs": "passed",
-      "dialogFocus": "passed"
+      "bookingLinksToSetmore": "passed",
+      "serviceMenu": "passed"
     },
     {
       "width": 768,
       "horizontalOverflow": false,
       "javaScriptErrors": 0,
       "serviceCount": 21,
-      "keyboardTabs": "passed",
-      "dialogFocus": "passed"
+      "bookingLinksToSetmore": "passed",
+      "serviceMenu": "passed"
     },
     {
       "width": 1024,
       "horizontalOverflow": false,
       "javaScriptErrors": 0,
       "serviceCount": 21,
-      "keyboardTabs": "passed",
-      "dialogFocus": "passed"
+      "bookingLinksToSetmore": "passed",
+      "serviceMenu": "passed"
     },
     {
       "width": 1440,
       "horizontalOverflow": false,
       "javaScriptErrors": 0,
       "serviceCount": 21,
-      "keyboardTabs": "passed",
-      "dialogFocus": "passed"
+      "bookingLinksToSetmore": "passed",
+      "serviceMenu": "passed"
     },
     {
       "width": 1920,
       "horizontalOverflow": false,
       "javaScriptErrors": 0,
       "serviceCount": 21,
-      "keyboardTabs": "passed",
-      "dialogFocus": "passed"
+      "bookingLinksToSetmore": "passed",
+      "serviceMenu": "passed"
     }
   ],
   "priorInteractionChecks": [
@@ -67,5 +67,12 @@
     "Local fonts load",
     "One H1",
     "All five price groups available with JavaScript disabled"
+  ],
+  "latestChecks": [
+    "Desktop category tabs and card prices",
+    "Mobile category accordions and prices",
+    "All Book now links target the supplied Setmore URL",
+    "Full price list retains the Word price updates",
+    "Root index.html and relative assets are suitable for GitHub Pages"
   ]
 }

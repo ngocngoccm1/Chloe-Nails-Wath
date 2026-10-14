@@ -1948,3 +1948,197 @@ dialog::backdrop {
   }
 }
 
+
+/* Service menu: a wide category bar and individually bookable prices. */
+.services .category-nav {
+  gap: 8px;
+  margin: 0 0 35px;
+  padding: 8px;
+  border: 1px solid var(--line);
+  background: var(--bg);
+  flex-wrap: nowrap;
+  overflow-x: auto;
+  scrollbar-width: thin;
+}
+.services .category-nav button {
+  flex: 1 0 auto;
+  min-height: 49px;
+  padding: 12px 20px;
+  white-space: nowrap;
+  font-size: .82rem;
+  font-weight: 600;
+  letter-spacing: .04em;
+  text-transform: uppercase;
+}
+.services .category-nav button[aria-selected="true"] {
+  background: var(--accent);
+  color: #fff;
+}
+.services .category-nav button[aria-selected="true"]:hover {
+  background: var(--accent);
+}
+.services .service-layout {
+  grid-template-columns: minmax(220px,.45fr) minmax(0,1fr);
+  gap: 35px;
+}
+.services .service-aside {
+  padding-top: 0;
+}
+.services .service-aside img {
+  aspect-ratio: 3/4;
+  border-radius: 0 100px 0 0;
+}
+.services .service-menu {
+  min-width: 0;
+}
+.services .price-group {
+  margin: 0;
+}
+.services .price-heading {
+  margin-bottom: 18px;
+}
+.services .price-list {
+  display: grid;
+  grid-template-columns: repeat(2,minmax(0,1fr));
+  gap: 18px;
+}
+.services .price-list>div {
+  display: flex;
+  align-items: stretch;
+  flex-direction: column;
+  gap: 0;
+  min-width: 0;
+  min-height: 176px;
+  padding: 0;
+  border: 1px solid var(--line);
+  border-radius: 0 0 26px 0;
+  overflow: hidden;
+  background: var(--bg);
+}
+.services .price-list dt {
+  padding: 19px 20px 0;
+  line-height: 1.35;
+  font-weight: 600;
+  min-height: 70px;
+}
+.services .price-list dd {
+  padding: 0 20px 15px;
+  font-family: var(--serif);
+  font-size: 1.8rem;
+  font-weight: 500;
+  line-height: 1.1;
+  white-space: normal;
+}
+.services .price-list dd .each {
+  font-family: var(--sans);
+  font-size: .75rem;
+}
+.service-book {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 48px;
+  margin-top: auto;
+  padding: 10px 20px;
+  background: #e3d4c4;
+  color: var(--ink);
+  font-size: .82rem;
+  font-weight: 600;
+  transition: background .25s ease;
+}
+.service-book:hover {
+  background: #d1bca7;
+}
+.service-book span {
+  font-size: 1rem;
+}
+.services .price-note {
+  margin-top: 16px;
+}
+#mobile-service-accordion {
+  display: none;
+}
+@media (max-width: 850px) {
+  .services .service-layout {
+    display: block;
+  }
+  .services .category-nav button {
+    flex: 0 0 auto;
+  }
+}
+@media (max-width: 600px) {
+  .js-enabled .services .category-nav,
+  .js-enabled .services #price-groups {
+    display: none;
+  }
+  .js-enabled #mobile-service-accordion {
+    display: block;
+  }
+  .services .service-layout {
+    display: block;
+  }
+  .services .price-list {
+    grid-template-columns: 1fr;
+    gap: 13px;
+  }
+  .services .price-list>div {
+    min-height: 155px;
+  }
+  .services .price-list dt {
+    min-height: 58px;
+    font-size: 1rem;
+  }
+  .services .price-list dd {
+    font-size: 1.6rem;
+    padding-bottom: 11px;
+  }
+  .services .price-heading {
+    display: none;
+  }
+  .services .price-note {
+    padding: 0 4px;
+  }
+  .service-accordion-item {
+    border-top: 1px solid var(--line);
+  }
+  .service-accordion-item:last-child {
+    border-bottom: 1px solid var(--line);
+  }
+  .service-accordion-item summary {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 15px;
+    list-style: none;
+    min-height: 71px;
+    padding: 13px 4px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+  }
+  .service-accordion-item summary::-webkit-details-marker {
+    display: none;
+  }
+  .service-accordion-item summary small {
+    display: block;
+    margin-top: 2px;
+    color: var(--muted);
+    font-size: .78rem;
+    font-weight: 400;
+  }
+  .accordion-chevron {
+    flex: 0 0 auto;
+    font-size: 1.5rem;
+    line-height: 1;
+    transition: transform .25s ease;
+  }
+  .service-accordion-item[open] .accordion-chevron {
+    transform: rotate(180deg);
+  }
+  .service-accordion-item .price-group {
+    padding: 0 3px 20px;
+  }
+  .services .menu-bottom {
+    margin-top: 18px;
+  }
+}

@@ -10,7 +10,7 @@ Open `index.html` directly, or serve the folder:
 python3 -m http.server 4173
 ```
 
-Then open `http://localhost:4173`. Upload `index.html`, `css/`, `js/` and `assets/` to a static web host to publish. The supplied Word document and original menu photograph do not need to be published.
+Then open `http://localhost:4173`. For GitHub Pages, publish this folder from the repository root; `index.html` is already at the root and all asset paths are relative. The supplied Word document and original menu photograph do not need to be published.
 
 ## Source of truth
 
@@ -21,9 +21,11 @@ All original files were read before implementation:
 
 Salon: **Chloe Nails Wath**. Address: **29–31 High Street, Wath-upon-Dearne, S63 7QQ**. Phone: **07481177919**. Email: **chloenailsandbeautywath@gmail.com**. Hours: **Monday–Saturday, 9:00 am–6:00 pm**.
 
-Booking links use `tel:+447481177919`, since no booking URL or WhatsApp account was supplied. Sunday hours, promotions, testimonials and experience claims have not been invented. Instagram and Facebook URLs retain the supplied account identities; tracking parameters were removed.
+Booking buttons open the supplied Setmore page at `https://chloenailswath.setmore.com/`. The phone number remains available with `tel:+447481177919` in contact details. Sunday hours, promotions, testimonials and experience claims have not been invented. Instagram and Facebook URLs retain the supplied account identities; tracking parameters were removed.
 
-The Word document's latest changes override the photographed menu:
+The Word document's latest changes override the photographed menu. The user confirmed that the website should keep the Word document's Monday–Saturday, 9:00 am–6:00 pm opening hours even though Setmore currently shows a different availability schedule. To allow booking during all advertised hours, update the Setmore schedule separately.
+
+The following price updates apply:
 
 | Service | Updated price |
 | --- | --- |
@@ -43,7 +45,7 @@ Cormorant Garamond and DM Sans are self-hosted Latin WOFF2 fonts. License files 
 ## Behavior
 
 - Accessible mobile navigation using a native dialog.
-- Keyboard-accessible service tabs and a complete price list dialog.
+- Keyboard-accessible service tabs on desktop, mobile category accordions, individual Setmore booking buttons and a complete price list dialog.
 - Gallery lightbox with previous/next buttons, arrow keys and Escape support.
 - Real phone, email, social and directions links.
 - Lazy-loaded images below the hero and a directions panel linking to the real address on Google Maps.

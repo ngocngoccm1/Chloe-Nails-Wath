@@ -29,6 +29,37 @@ window.addEventListener('resize', () => { if (window.innerWidth > 850 && mobileM
 
 // All service content is in HTML, so the complete menu remains available without JS.
 const groups = [...document.querySelectorAll('#price-groups > .price-group')];
+const bookingUrl = 'https://chloenailswath.setmore.com/';
+// One price source populates desktop cards, the mobile accordion and the full menu.
+groups.forEach(group => {
+  group.querySelectorAll('.price-list > div').forEach(item => {
+    const link = document.createElement('a');
+    link.className = 'service-book';
+    link.href = bookingUrl;
+    link.target = '_blank';
+    link.rel = 'noopener noreferrer';
+    link.setAttribute('aria-label', `Book ${item.querySelector('dt').textContent.trim()} online`);
+    link.innerHTML = 'Book now <span aria-hidden="true">↗</span>';
+    item.append(link);
+  });
+});
+const mobileAccordion = document.querySelector('#mobile-service-accordion');
+groups.forEach((group, index) => {
+  const details = document.createElement('details');
+  details.className = 'service-accordion-item';
+  details.name = 'chloe-service-category';
+  if (index === 0) details.open = true;
+  const summary = document.createElement('summary');
+  const label = group.querySelector('h3').textContent.trim();
+  const count = group.querySelectorAll('.price-list > div').length;
+  summary.innerHTML = `<span>${label}<small>${count} services</small></span><span class="accordion-chevron" aria-hidden="true">⌄</span>`;
+  details.append(summary);
+  const content = group.cloneNode(true);
+  ['id', 'role', 'aria-labelledby', 'tabindex'].forEach(attribute => content.removeAttribute(attribute));
+  content.hidden = false;
+  details.append(content);
+  mobileAccordion.append(details);
+});
 const categoryButtons = [...document.querySelectorAll('[data-category]')];
 const categoryNav = document.querySelector('.category-nav');
 categoryNav.setAttribute('role', 'tablist');
@@ -59,6 +90,7 @@ const priceDialog = document.querySelector('#price-dialog');
 const fullPrices = document.querySelector('#full-price-content');
 groups.forEach(group => {
   const clone = group.cloneNode(true);
+  clone.querySelectorAll('.service-book').forEach(link => link.remove());
   ['id', 'role', 'aria-labelledby', 'tabindex'].forEach(attribute => clone.removeAttribute(attribute));
   clone.hidden = false;
   fullPrices.append(clone);
